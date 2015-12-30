@@ -59,3 +59,8 @@ echo 'foreach ($o->some_key->some_other_key->some_key as $v) { echo var_export($
 echo "\n";
 foreach ($o->some_key->some_other_key->some_key as $v) { echo var_export($v, true)."\n"; }
 echo "\n\n";
+
+echo 'foreach ($o->some_key as $v) { echo var_export($v, true)."\n"; }';
+echo "\n";
+foreach ($o->some_key as $v) { echo var_export($v, true)."\n"; }
+echo "\n\n";

@@ -29,7 +29,7 @@ class Wrapper implements \Iterator {
 		}
 
 		public function current() {
-			return current($this->any);
+			return Wrapper::wrap(current($this->any));
 		}
 
 		public function key() {
@@ -37,7 +37,7 @@ class Wrapper implements \Iterator {
 		}
 
 		public function next() {
-			return next($this->any);
+			return Wrapper::wrap(next($this->any));
 		}
 
 		public function valid() {
