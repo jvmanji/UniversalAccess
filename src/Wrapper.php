@@ -6,7 +6,7 @@ use UniversalAccess\ArrayWrapper;
 use UniversalAccess\ObjectWrapper;
 use UniversalAccess\NotFoundWrapper;
 
-class Wrapper {
+class Wrapper implements \Iterator {
     protected $any;
 
     public function __construct($any = null) {
@@ -24,4 +24,25 @@ class Wrapper {
             return $any;
         }
     }
+		public function rewind() {
+			reset($this->any);
+		}
+
+		public function current() {
+			return current($this->any);
+		}
+
+		public function key() {
+			return key($this->any);
+		}
+
+		public function next() {
+			return next($this->any);
+		}
+
+		public function valid() {
+			$key = key($this->any);
+			$res = ($key !== NULL && $key !== FALSE);
+			return $res;
+		}
 }

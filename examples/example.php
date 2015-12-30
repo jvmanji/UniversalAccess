@@ -54,3 +54,8 @@ echo "\n\n";
 echo 'isset($a[\'some_key\']->some_other_key->raw()) → ';
 var_export($a['some_key']->some_other_key->raw());
 echo "\n\n";
+
+echo 'foreach ($o->some_key->some_other_key->some_key as $v) { echo var_export($v, true)."\n"; }';
+echo "\n";
+foreach ($o->some_key->some_other_key->some_key as $v) { echo var_export($v, true)."\n"; }
+echo "\n\n";
