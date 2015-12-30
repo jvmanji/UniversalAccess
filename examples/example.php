@@ -1,8 +1,8 @@
 <?php
 
-require_once 'UniversalAccess.class.php';
-
 use UniversalAccess\Wrapper as W;
+
+require_once __DIR__.'/../vendor/autoload.php';
 
 $json = json_encode([
 	'some_key' => [

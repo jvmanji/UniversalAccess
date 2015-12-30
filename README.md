@@ -13,7 +13,6 @@ This package includes PHP wrapper for arrays and objects. When you get data from
 By using this class you can do just:
 
 ```php
-    require_once 'UniversalAccess.class.php';
     use UniversalAccess\Wrapper as W;
 
     $data = W::wrap($result);
@@ -24,7 +23,7 @@ By using this class you can do just:
 ```
 
 ## Examples
-More examples are in example.php file.
+More examples are in examples directory.
 
 ## Todo
 1. Implement Iterator interface.
