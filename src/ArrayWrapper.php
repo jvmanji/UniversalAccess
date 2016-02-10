@@ -11,7 +11,8 @@ class ArrayWrapper extends Wrapper implements \ArrayAccess {
 
     public function __construct($any) {
         if (is_array($any)) {
-            $this->any = $any;
+            $this->any  = $any;
+						$this->type = 'array';
         } else {
             throw new WrapException('ArrayWrapper wraps only arrays');
         }
@@ -24,19 +25,8 @@ class ArrayWrapper extends Wrapper implements \ArrayAccess {
             return new NotFoundWrapper();
         }
     }
-
-    public function __get($offset) {
-        return $this->offsetGet($offset);
-    }
-
     public function __isset($offset) {
         return isset($this->any[$offset]);
-    }
-    public function raw() {
-        return $this->any;
-    }
-    public function offsetExists($offset) {
-        return $this->__isset($offset);
     }
     public function offsetSet($offset, $v) {
         $this->any->$offset = $v;

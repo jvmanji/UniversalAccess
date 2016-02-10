@@ -26,5 +26,4 @@ By using this class you can do just:
 More examples are in examples directory.
 
 ## Todo
-1. Implement Iterator interface.
-2. Think about adding wrappers for other types?
+Add license

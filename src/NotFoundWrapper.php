@@ -5,6 +5,9 @@ namespace UniversalAccess;
 use UniversalAccess\WrapException;
 
 class NotFoundWrapper extends Wrapper implements \ArrayAccess{
+    public function __construct() {
+			$this->type = 'NULL';
+		}
     public function offsetGet($offset) {
         return new NotFoundWrapper();
     }
