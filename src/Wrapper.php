@@ -118,4 +118,7 @@ class Wrapper implements \Iterator {
 		return $this->offsetGet($offset);
 	}
 
+	public function __toString() {
+		return (string)$this->any;
+	}
 }
