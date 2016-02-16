@@ -17,6 +17,11 @@ class Wrapper implements \Iterator {
 		if (is_array($any)) {
 			return new ArrayWrapper($any);
 		} elseif (is_object($any)) {
+
+            if ($any instanceof Wrapper) {
+                return $any;
+            }
+
 			return new ObjectWrapper($any);
 		} elseif ($any === null) {
 			return new NotFoundWrapper();
