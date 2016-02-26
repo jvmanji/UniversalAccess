@@ -26,9 +26,9 @@ class ObjectWrapper extends Wrapper implements \ArrayAccess {
 		return isset($this->any->$offset);
 	}
 	public function offsetSet($offset, $v) {
-		$this->any[$offset] = $v;
+		$this->any->$offset = $v;
 	}
 	public function offsetUnset($offset) {
-		unset($this->any[$offset]);
+		unset($this->any->$offset);
 	}
 }
