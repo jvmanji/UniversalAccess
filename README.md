@@ -27,3 +27,9 @@ More examples are in examples directory.
 
 ## Todo
 Add license
+
+<div id="___test"></div>
+
+<script>
+document.getElementById('___test').innerText = 'test';
+</script>
