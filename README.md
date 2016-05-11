@@ -24,6 +24,3 @@ By using this class you can do just:
 
 ## Examples
 More examples are in examples directory.
-
-## Todo
-Add license
