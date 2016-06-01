@@ -2,6 +2,7 @@
     "name": "jvmanji/universal-access",
     "description": "This package includes PHP wrapper for arrays and objects, which simplifies access to nested properties/keys.",
     "type": "library",
+		"license": "MIT",
     "authors": [
         {
             "name": "Rafał Toboła",
