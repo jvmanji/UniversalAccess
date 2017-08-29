@@ -101,7 +101,7 @@ class Wrapper implements \Iterator {
 	}
 
 	public function next() {
-		return Wrapper::wrap(next($this->any));
+		next($this->any);
 	}
 
 	public function valid() {

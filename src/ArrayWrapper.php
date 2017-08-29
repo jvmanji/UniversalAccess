@@ -6,7 +6,7 @@ use UniversalAccess\WrapException;
 use UniversalAccess\Wrapper;
 use UniversalAccess\NotFoundWrapper;
 
-class ArrayWrapper extends Wrapper implements \ArrayAccess {
+class ArrayWrapper extends Wrapper implements \ArrayAccess, \Countable {
 	private $array;
 
 	public function __construct($any) {
@@ -33,5 +33,9 @@ class ArrayWrapper extends Wrapper implements \ArrayAccess {
 	}
 	public function offsetUnset($offset) {
 		unset($this->any[$offset]);
+	}
+
+	public function count() {
+		return count($this->any);
 	}
 }
