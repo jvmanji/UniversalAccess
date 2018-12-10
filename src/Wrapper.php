@@ -6,7 +6,7 @@ use UniversalAccess\ArrayWrapper;
 use UniversalAccess\ObjectWrapper;
 use UniversalAccess\NotFoundWrapper;
 
-class Wrapper implements \Iterator {
+class Wrapper implements \Iterator, \JsonSerializable {
 	protected $any, $type;
 
 	public function __construct($any = null) {
@@ -125,5 +125,9 @@ class Wrapper implements \Iterator {
 
 	public function __toString() {
 		return (string)$this->any;
+	}
+
+	public function jsonSerialize() {
+		return $this->any;
 	}
 }
